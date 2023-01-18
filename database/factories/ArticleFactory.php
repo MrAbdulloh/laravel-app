@@ -17,7 +17,12 @@ class ArticleFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->title,
+            'body' => $this->faker->text(100),
+            'slug' => $this->faker->numberBetween(1, 100),
+            'img' => $this->faker->text,
+            'created_at'=>$this->faker->dateTimeBetween('-1 year',)
+
         ];
     }
 }
